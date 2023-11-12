@@ -72,6 +72,7 @@ if __name__ == '__main__':
   Q_table *= scale
   # read image
   I = cv2.imread(im_path).astype('float')
+  I = I[:, :, 0].astype('float')
   I -= 128.0
   N = len(I)
 
